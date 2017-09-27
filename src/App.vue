@@ -1,11 +1,13 @@
 <template>
     <div id="app">
         <demo-table :tableColumn="column" :initTableData="tableData"/>
+        <pagination :total="50" :pageSize="3"/>
     </div>
 </template>
 
 <script>
 import demoTable from './components/Table'
+import pagination from './components/pagination'
 import data from '../test'
 export default {
     data () {
@@ -15,7 +17,8 @@ export default {
         }
     },
     components: {
-        demoTable
+        demoTable,
+        pagination
     }
 }
 </script>
