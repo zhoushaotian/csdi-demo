@@ -1,14 +1,14 @@
 <template>
     <div id="table-wrapper">
-        <table>
+        <table :style="{'width': width}">
             <thead>
                 <tr>
-                    <th v-for="(name, index) in tableColumn" :key="index">{{name}}</th>
+                    <th class="table-header" v-for="(name, index) in tableColumn" :key="index">{{name}}</th>
                 </tr>
             </thead>
             <tbody>
                 <tr v-for="(row, index) in tableData" :key="index">
-                    <td v-for="(cell, index) in row" :key="index">
+                    <td class="table-body" v-for="(cell, index) in row" :key="index">
                         <span>{{cell}}</span>
                     </td>
                 </tr>
@@ -22,7 +22,7 @@ export default {
     data () {
         return {
             tableData: this.initTableData
-        }
+        };
     },
     props: {
         tableColumn: {
@@ -30,11 +30,20 @@ export default {
         },
         initTableData: {
             type: Array
+        },
+        width: {
+            type: String,
+            default: '100%'
         }
     }
-}
+};
 </script>
 
 <style>
-
+    #table-wrapper{
+        background-color: #eeeeee;
+    }
+    .table-header{
+        text-align: left;
+    }
 </style>

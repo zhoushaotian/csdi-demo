@@ -26,6 +26,10 @@ module.exports = {
     'indent': [
       'error',
       4
+    ],
+    'semi': [
+      'error',
+      'always'
     ]
   }
 }
