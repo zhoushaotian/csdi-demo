@@ -97,11 +97,6 @@ export default {
                 }
             }
         }
-    },
-    watch: {
-        currentPage: function (newPage) {
-            this.onPageChange(newPage);
-        }
     }
 };
 </script>

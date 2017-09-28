@@ -21,10 +21,12 @@
 export default {
     props: {
         tableColumn: {
-            type: Array
+            type: Array,
+            default: []
         },
         tableData: {
-            type: Array
+            type: Array,
+            default: []
         },
         width: {
             type: String,
