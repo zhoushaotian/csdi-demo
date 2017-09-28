@@ -19,16 +19,11 @@
 
 <script>
 export default {
-    data () {
-        return {
-            tableData: this.initTableData
-        };
-    },
     props: {
         tableColumn: {
             type: Array
         },
-        initTableData: {
+        tableData: {
             type: Array
         },
         width: {
