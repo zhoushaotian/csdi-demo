@@ -3,7 +3,7 @@
 import Vue from 'vue';
 import App from './App';
 import vueResource from 'vue-resource';
-
+import Alert from './alert/alert';
 Vue.config.productionTip = false;
 Vue.use(vueResource);
 /* eslint-disable no-new */
@@ -12,3 +12,11 @@ new Vue({
     template: '<App/>',
     components: { App }
 });
+
+let demoAlert = new Alert({
+    title: '111',
+    content: '222',
+    type: 'success'
+});
+demoAlert.initAlert().show();
+

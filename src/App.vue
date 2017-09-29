@@ -1,7 +1,9 @@
 <template>
     <div id="app">
         <demo-table :tableColumn="column" :tableData="tableData" />
-        <pagination :currentPage="currentPage" :total="total" :pageSize="pageSize" :onPageChange="handlePageChange" />
+        <div class="pagination-wrapper">
+            <pagination :currentPage="currentPage" :total="total" :pageSize="pageSize" :onPageChange="handlePageChange" />
+        </div>
     </div>
 </template>
 
@@ -67,5 +69,19 @@ export default {
 </script>
 
 <style>
-
+#app{
+    position: relative;
+    width: 800px;
+    height: 400px;
+    margin: auto;
+}
+.pagination-wrapper{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.link{
+    display: block;
+}
 </style>
