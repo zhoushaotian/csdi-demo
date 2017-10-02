@@ -29,7 +29,8 @@ npm run dev
 pageSize|每页大小|Number|1
 total|总条目数|Number|1
 currentPage|当前页码|Number|1
-onPageChange|当页码改变时候的回调|Function|无    
+onPageChange|当页码改变时候的回调|Function|无  
+
 具体使用请参照App.vue  
 ## 表格组件API  
 名称|描述|类型|默认值
@@ -37,6 +38,7 @@ onPageChange|当页码改变时候的回调|Function|无
 tableColumn|表头名的数组|Array(String)|[]
 tableData|表格数据数组|Array(Array)|[]
 width|表格宽度|String|100%  
+
 与分页结合使用请参照App.vue 
 ## 弹窗组件API  
 名称|描述|类型|默认值
